@@ -1,8 +1,137 @@
-@import 'constants.css'
+@import "constants.css";
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  font-family: "Raleway", sans-serif;
+  background-color: var(--background-color);
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.desc {
+  width: 50vw;
+  height: 30vh;
+  align-items: center;
+  text-align: center;
+  color: var(--accent-1);
+}
+
+h1 {
+  font-size: 60px;
+  color: var(--text-color);
+}
+
+.customize {
+  width: 60vw;
+  height: 85vh;
+  background-color: #d4d4d4;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.customize h2 {
+  margin-top: 0;
+}
+
+.customize-option {
+  margin-bottom: 15px;
+}
+
+.customize-option label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.customize-option select,
+.customize-option input[type="date"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+  box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+.customize-option select:focus,
+.customize-option input[type="date"]:focus {
+  outline: none;
+  border-color: #66afe9; /* Add focus styles */
+}
+
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  text-align: center;
+}
+
+.star {
+  display: inline-block;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.star:hover,
+.star:hover ~ .star {
+  color: orange;
+}
+
+.star.active,
+.star.active ~ .star {
+  color: orange;
+}
+
+.submit-button {
+  padding: 20px;
+}
+
+/* CSS */
+.button-89 {
+  --b: 3px; /* border thickness */
+  --s: 0.45em; /* size of the corner */
+  --color: #373b44;
+
+  padding: calc(0.5em + var(--s)) calc(0.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background: conic-gradient(
+      from 90deg at var(--b) var(--b),
+      #0000 90deg,
+      var(--color) 0
+    )
+    var(--_p) var(--_p) / calc(100% - var(--b) - 2 * var(--_p))
+    calc(100% - var(--b) - 2 * var(--_p));
+  transition: 0.3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: 0.6em;
+  font-size: 16px;
+
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-89:hover,
+.button-89:focus-visible {
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: 0.05em;
+}
+
+.button-89:active {
+  background: var(--color);
+  color: #fff;
 }

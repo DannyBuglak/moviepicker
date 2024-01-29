@@ -4,14 +4,87 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Movie Picker</title>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Links to css files -->
     <link rel="stylesheet" href="../static/styles/home.css" />
+    <link rel="stylesheet" href="../static/styles/footer.css" />
   </head>
   <body>
-    <div class="container">
-      <h1>Movie Picker</h1>
-      <button id="pickButton">Pick a Movie</button>
-      <p id="movieName"></p>
-    </div>
+    <main class="container">
+      <!-- Header of the website -->
+      <div class="header">
+        <h1>Random Movie Picker</h1>
+      </div>
+
+      <!-- Description of the website -->
+      <div class="desc">
+        <h2>
+          Can't find a movie to watch? Use this to customize what type of movie
+          you are looking for and find one for thee night!
+        </h2>
+      </div>
+
+      <!-- Customization Box -->
+      <div class="customize">
+        <!-- Choose genre -->
+
+        <!-- Choose rating -->
+
+        <!-- Choose release date, from selected date until now -->
+
+        <!-- Choose free or paid -->
+        <h2>Customize Your Search</h2>
+
+        <div class="customize-option">
+          <label for="genre">Choose Genre:</label>
+          <select id="genre">
+            <option value="action">Action</option>
+            <option value="comedy">Comedy</option>
+            <option value="drama">Drama</option>
+            <!-- Add more options as needed -->
+          </select>
+        </div>
+
+        <div class="customize-option">
+          <label for="rating">Choose Rating:</label>
+          <div class="rating">
+            <input type="hidden" name="rating" id="rating" value="0" />
+            <span class="star" data-rating="1">&#9733;</span>
+            <span class="star" data-rating="2">&#9733;</span>
+            <span class="star" data-rating="3">&#9733;</span>
+            <span class="star" data-rating="4">&#9733;</span>
+            <span class="star" data-rating="5">&#9733;</span>
+          </div>
+        </div>
+
+        <div class="customize-option">
+          <label for="release-date">Choose Release Date:</label>
+          <input type="date" id="release-date" />
+        </div>
+
+        <div class="customize-option">
+          <label for="free-paid">Choose Free or Paid:</label>
+          <select id="free-paid">
+            <option value="free">Free</option>
+            <option value="paid">Paid</option>
+            <option value="ignore">Ignore</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="submit-button">
+        <button class="button-89" id="pickButton">Pick a Movie</button>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Danny Buglak</p>
+    </footer>
 
     <!-- <script src="script.js"></script> -->
   </body>
