@@ -13,6 +13,9 @@
     <!-- Links to css files -->
     <link rel="stylesheet" href="../static/styles/home.css" />
     <link rel="stylesheet" href="../static/styles/footer.css" />
+
+    <!-- Set up script connection -->
+    <script src="../static/script/script.js" defer></script>
   </head>
   <body>
     <main class="container">
@@ -31,25 +34,23 @@
 
       <!-- Customization Box -->
       <div class="customize">
-        <!-- Choose genre -->
-
-        <!-- Choose rating -->
-
-        <!-- Choose release date, from selected date until now -->
-
-        <!-- Choose free or paid -->
         <h2>Customize Your Search</h2>
 
+        <!-- Choose genre -->
         <div class="customize-option">
           <label for="genre">Choose Genre:</label>
           <select id="genre">
             <option value="action">Action</option>
             <option value="comedy">Comedy</option>
             <option value="drama">Drama</option>
+            <option value="horror">Horror</option>
+            <option value="thriller">Thriller</option>
+            <option value="documentary">Documentary</option>
             <!-- Add more options as needed -->
           </select>
         </div>
 
+        <!-- Choose rating -->
         <div class="customize-option">
           <label for="rating">Choose Rating:</label>
           <div class="rating">
@@ -62,13 +63,15 @@
           </div>
         </div>
 
+        <!-- Choose release date, from selected date until now -->
         <div class="customize-option">
           <label for="release-date">Choose Release Date:</label>
           <input type="date" id="release-date" />
         </div>
 
+        <!-- Choose free or paid -->
         <div class="customize-option">
-          <label for="free-paid">Choose Free or Paid:</label>
+          <label for="free-paid">Choose Free, Paid, or Ignore:</label>
           <select id="free-paid">
             <option value="free">Free</option>
             <option value="paid">Paid</option>
@@ -78,14 +81,14 @@
       </div>
 
       <div class="submit-button">
-        <button class="button-89" id="pickButton">Pick a Movie</button>
+        <button class="button-89" id="pickButton">Find Me A Movie!</button>
       </div>
+
+      <!-- OUTPUT: Will include where it can be streamed, movie title, release date, rating -->
     </main>
 
     <footer>
       <p>&copy; 2024 Danny Buglak</p>
     </footer>
-
-    <!-- <script src="script.js"></script> -->
   </body>
 </html>
